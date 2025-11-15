@@ -1,3 +1,7 @@
+require('dotenv').config();
+
+const { MongoClient } = require('mongodb');
+
 const uri = "mongodb+srv://inventory_admin:Plugitout_10@cluster0.22go2ww.mongodb.net/?appName=Cluster0";
 
    const client = new MongoClient(uri);
@@ -8,7 +12,7 @@ const uri = "mongodb+srv://inventory_admin:Plugitout_10@cluster0.22go2ww.mongodb
        console.log("✅ Connected to MongoDB Atlas!");
        
        const db = client.db("inventory_db");
-       const collection = db.collection("products");
+       const collection = db.collection("Products");
        
        const count = await collection.countDocuments();
        console.log(`📊 Products collection has ${count} documents`);

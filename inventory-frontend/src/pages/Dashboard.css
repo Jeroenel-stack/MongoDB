@@ -1,0 +1,35 @@
+.dashboard {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard h1 {
+  margin-bottom: 30px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 48px;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.stat-card.warning .stat-value {
+  color: #e74c3c;
+}
+
+.stat-label {
+  font-size: 18px;
+  color: #666;
+}
